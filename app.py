@@ -534,14 +534,6 @@ async def perform_emote(team_code: str, uids: list, emote_id: int):
             await SEndPacKeT(None, online_writer, 'OnLine', H)
 
         # 3. LEAVE SQUAD instantly (correct bot UID)
-        LV = await ExiT(BOT_UID, key, iv)
-        await SEndPacKeT(None, online_writer, 'OnLine', LV)
-        await asyncio.sleep(0.03)
-
-        return {"status": "success", "message": "Emote done & bot left instantly"}
-
-    except Exception as e:
-        raise Exception(f"Failed to perform emote: {str(e)}")
 
 
 @app.route('/join')
@@ -593,7 +585,7 @@ async def MaiiiinE():
     global loop, key, iv, region, BOT_UID
 
     # BOT LOGIN UID
-    BOT_UID = int('14634300525')  # <-- FIXED BOT UID
+    BOT_UID = int('13781786920')  # <-- FIXED BOT UID
 
     Uid, Pw = '4473575090', 'URBUNNY_URBUNNY08_FREEFIRE_S6T1PYZN'
 
