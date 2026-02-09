@@ -534,6 +534,14 @@ async def perform_emote(team_code: str, uids: list, emote_id: int):
             await SEndPacKeT(None, online_writer, 'OnLine', H)
 
         # 3. LEAVE SQUAD instantly (correct bot UID)
+        await asyncio.sleep(0.03)
+
+        return {"status": "success", "message": "Emote done & bot left instantly"}
+
+    except Exception as e:
+        raise Exception(f"Failed to perform emote: {str(e)}")
+
+
 
 
 @app.route('/join')
