@@ -1,5 +1,6 @@
 import requests , os , psutil , sys , jwt , pickle , json , binascii , time , urllib3 , base64 , datetime , re , socket , threading , ssl , pytz , aiohttp
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from protobuf_decoder.protobuf_decoder import Parser
 from xC4 import * ; from xHeaders import *
 from datetime import datetime
@@ -9,8 +10,6 @@ from threading import Thread
 from Pb2 import DEcwHisPErMsG_pb2 , MajoRLoGinrEs_pb2 , PorTs_pb2 , MajoRLoGinrEq_pb2 , sQ_pb2 , Team_msg_pb2
 from cfonts import render, say
 
-
-#EMOTES BY YASH X CODEX
 
 
 
@@ -29,6 +28,7 @@ Chat_Leave = False
 #------------------------------------------#
 
 app = Flask(__name__)
+CORS(app)
 
 Hr = {
     'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 11; ASUS_Z01QD Build/PI)",
