@@ -33,14 +33,6 @@ CORS(app)
 @app.route("/")
 def home():
     return "Bot server is running ✅"
-
-@app.route('/join')
-def join_team():
-    # tumhara join_team ka code yahan
-    team_code = request.args.get('tc')
-    uid1 = request.args.get('uid1')
-    # baki UIDs aur emote_id
-    return jsonify({"status": "success", "message": "Emote triggered"})
     
 Hr = {
     'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 11; ASUS_Z01QD Build/PI)",
